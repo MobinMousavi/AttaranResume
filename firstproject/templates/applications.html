@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>کاربردهای پایتون - PythonFarsi</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        .navbar {
+            background-color:  #0984e3;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: #FFD43B;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin-left: 2rem;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #FFD43B;
+        }
+
+        .hero {
+            background: linear-gradient(45deg,  #0984e3,  #0984e3);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .uses-section {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: #306998;
+        }
+
+        .uses-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .use-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .use-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .use-icon {
+            font-size: 2rem;
+            color: #4B8BBE;
+            margin-bottom: 1rem;
+        }
+
+        .use-card h3 {
+            color: #306998;
+            margin-bottom: 1rem;
+        }
+
+        .code-example {
+            background: #1E1E1E;
+            color: #D4D4D4;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+            font-family: 'Courier New', monospace;
+        }
+
+        footer {
+            background: #306998;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .uses-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">PythonFarsi</div>
+        <div class="nav-links">
+            <a href="#uses">کاربردها</a>
+            <a href="#features">ویژگیها</a>
+            <a href="#community">جامعه</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <h1>پایتون: زبان برنامه‌نویسی برای همه کارها</h1>
+        <p>یادگیری آسان، جامعه فعال و کاربردهای گسترده</p>
+    </section>
+
+    <section class="uses-section" id="uses">
+        <h2 class="section-title">کاربردهای اصلی پایتون</h2>
+        <div class="uses-grid">
+            <div class="use-card">
+                <i class="fas fa-brain use-icon"></i>
+                <h3>هوش مصنوعی و یادگیری ماشین</h3>
+                <p>کتابخانه‌هایی مانند TensorFlow، PyTorch و Scikit-learn</p>
+            </div>
+
+            <div class="use-card">
+                <i class="fas fa-globe use-icon"></i>
+                <h3>توسعه وب</h3>
+                <p>فریمورک‌های قدرتمند مانند Django و Flask</p>
+            </div>
+
+            <div class="use-card">
+                <i class="fas fa-chart-line use-icon"></i>
+                <h3>علم داده و تحلیل</h3>
+                <p>Pandas، NumPy، Matplotlib و Jupyter Notebook</p>
+            </div>
+
+            <div class="use-card">
+                <i class="fas fa-robot use-icon"></i>
+                <h3>اتوماسیون</h3>
+                <p>خودکارسازی وظایف تکراری و اسکریپت‌نویسی</p>
+            </div>
+
+            <div class="use-card">
+                <i class="fas fa-gamepad use-icon"></i>
+                <h3>توسعه بازی</h3>
+                <p>کتابخانه‌های PyGame و Panda3D</p>
+            </div>
+
+            <div class="use-card">
+                <i class="fas fa-microchip use-icon"></i>
+                <h3>برنامه‌نویسی سخت‌افزار</h3>
+                <p>کاربرد در رزبری پای و سیستم‌های نهفته</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="uses-section">
+        <h2 class="section-title">نمونه کد پایتون</h2>
+        <div class="code-example">
+            <pre dir="ltr">
+# محاسبه سری فیبوناچی
+def fibonacci(n):
+    a, b = 0, 1
+    while a < n:
+        print(a, end=' ')
+        a, b = b, a+b
+fibonacci(1000)
+            </pre>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2023 PythonFarsi. تمامی حقوق محفوظ است.</p>
+    </footer>
+</body>
+</html>
